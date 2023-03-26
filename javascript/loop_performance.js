@@ -1,3 +1,6 @@
+// For measuring the performance. You also need a console.endTime with the same string within parentheses
+console.time("Array initialize");
+
 let array = [];
 for (let i = 0; i < 1000000; i++) {
   array.push(i);
@@ -37,3 +40,5 @@ let sum = array.reduce(function(accumulator, element) {
 }, 0);
 endTime = performance.now();
 console.log('Reduce: ' + (endTime - startTime).toFixed(5) + ' milliseconds');
+
+console.timeEnd("Array initialize")
