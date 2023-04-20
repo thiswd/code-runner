@@ -41,4 +41,4 @@ let sum = array.reduce(function(accumulator, element) {
 endTime = performance.now();
 console.log('Reduce: ' + (endTime - startTime).toFixed(5) + ' milliseconds');
 
-console.timeEnd("Array initialize")
+console.timeEnd("Array initialize");
