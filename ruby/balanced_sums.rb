@@ -1,6 +1,5 @@
 def balanced_sums(arr)
   middle_index = 0
-  middle_element = nil
   arr_size = arr.length
 
   while(middle_index < arr_size)
@@ -18,13 +17,29 @@ def balanced_sums(arr)
     end
 
     if right_total == left_total
-      middle_element = arr[middle_index]
-      break
+      return "YES"
     end
     middle_index += 1
   end
 
-  middle_element ? "YES" : "NO"
+  "NO"
+end
+
+def balancedSums(arr)
+  total_sum = arr.reduce(:+)
+  left_sum = 0
+
+  arr.each do |value|
+    total_sum -= value
+
+    if left_sum == total_sum
+      return "YES"
+    end
+
+    left_sum += value
+  end
+
+  "NO"
 end
 
 puts balanced_sums([1, 2, 3, 3])
