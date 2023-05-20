@@ -8,3 +8,12 @@ def reverse_list(head)
   end
   prev
 end
+
+def reverse_list(head, prev = nil)
+  return prev unless head
+
+  next_node = head.next
+  head.next = prev
+
+  reverse_list(next_node, head)
+end
