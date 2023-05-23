@@ -1,3 +1,22 @@
+function twoSum(arr, target) {
+  let start = 0;
+  let end = arr.length - 1;
+
+  while (start < end) {
+    let sum = arr[start] + arr[end];
+
+    if (sum === target) {
+      return [start, end];
+    } else if (sum < target) {
+      start += 1;
+    } else {
+      end -= 1;
+    }
+  }
+
+  return [-1, -1];
+}
+
 function twoSum(nums, target) {
   let map = new Map();
   for (let i = 0; i < nums.length; i++) {
