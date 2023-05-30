@@ -13,6 +13,21 @@ def interval_intersection(first_list, second_list)
   intervals
 end
 
+def interval_intersection(first_list, second_list)
+  overlaps = []
+
+  first_list.each do |start1, end1|
+    second_list.each do |start2, end2|
+      start_max = [start1, start2].max
+      end_min = [end1, end2].min
+      if start_max <= end_min
+        overlaps << [start_max, end_min]
+      end
+    end
+  end
+
+  overlaps
+end
 
 def interval_intersection(first_list, second_list)
   i, j = 0, 0
