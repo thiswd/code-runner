@@ -12,3 +12,23 @@ def merge_intervals(numbers)
   end
   intervals
 end
+
+def merge_intervals(intervals)
+  intervals.sort_by! { |interval| interval[0] }
+
+  merged = []
+  current_interval = intervals[0]
+
+  intervals[1..-1].each do |interval|
+    if current_interval[1] >= interval[0]
+      current_interval[1] = [current_interval[1], interval[1]].max
+    else
+      merged << current_interval
+      current_interval = interval
+    end
+  end
+  merged << current_interval
+  merged
+end
+
+intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
