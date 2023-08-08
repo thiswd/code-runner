@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/find-the-duplicate-number/
+
 def find_duplicate(nums)
   # Start of the range is 1
   low = 1
@@ -24,6 +26,13 @@ def find_duplicate(nums)
 
   # The duplicate number is where low is
   low
+end
+
+def find_duplicate(nums)
+  count = nums.tally
+  count.detect do |k, v|
+    return k if v > 1
+  end
 end
 
 find_duplicate([0,1,2,3,3,4])
