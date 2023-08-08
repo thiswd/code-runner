@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
+
 def find_disappeared_numbers(nums)
   i = 0
   while i < nums.length
