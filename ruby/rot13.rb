@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/ruby-enumerable-collect/problem
+
 def rot13(secret_messages)
   letters = ("a".."z").to_a
   letters_length = letters.length
