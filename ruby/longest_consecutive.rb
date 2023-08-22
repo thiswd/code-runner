@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/longest-consecutive-sequence/
+
 def longest_consecutive(nums)
   sequences = {}
   key = -1
@@ -21,6 +23,25 @@ def longest_consecutive(nums)
   end
 
   longest
+end
+
+def longest_consecutive(nums)
+  return 0 if nums.empty?
+
+  nums = nums.uniq.sort!
+  longest_streak = 1
+  current_streak = 1
+
+  for i in 1...nums.length
+    if nums[i] == nums[i-1] + 1
+      current_streak += 1
+    else
+      longest_streak = [longest_streak, current_streak].max
+      current_streak = 1
+    end
+  end
+
+  [longest_streak, current_streak].max
 end
 
 nums = [0,3,7,2,5,8,4,6,0,1]
