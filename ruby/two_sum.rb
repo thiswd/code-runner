@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/two-sum/
+
 def two_sum(nums, target)
   head = 0
   tail = nums.length - 1
