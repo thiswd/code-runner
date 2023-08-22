@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/merge-intervals/
+
 def merge_intervals(numbers)
   sorted_numbers = numbers.sort_by { |arr| arr.first }
 
