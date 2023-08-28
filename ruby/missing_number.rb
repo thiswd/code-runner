@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/missing-number/
+
 def missing_number(nums)
   sum_all = (0..nums.length).reduce(:+)
   sum_arr = nums.reduce(:+)
