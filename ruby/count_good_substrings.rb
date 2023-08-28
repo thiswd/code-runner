@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/
+
 def count_good_substrings(s)
   window = []
 
