@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/reverse-linked-list/
+
 def reverse_list(head)
   prev = nil
   while head do
