@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/squares-of-a-sorted-array/
+
 def sorted_squares(nums)
   head = 0
   tail = nums.length - 1
